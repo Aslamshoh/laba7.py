@@ -71,7 +71,7 @@ entry_S = Entry(root)
 entry_S.grid(row=2, column=1, padx=10, pady=5, sticky='w')
 
 # Кнопка вычисления
-Button(root, text="Вычислить", command=calculate_and_display).grid(row=3, column=0, columnspan=10, pady=10)
+Button(root, text="Вычислить", command=calculate_and_display).grid(row=3, column=0, columnspan=5, pady=5)
 
 # Поле вывода результатов с прокруткой
 output_frame = Label(root)
@@ -79,7 +79,7 @@ output_frame.grid(row=4, column=0, columnspan=10, padx=10, pady=10)
 scrollbar = Scrollbar(output_frame)
 scrollbar.pack(side='right', fill='y')
 
-output_text = Text(output_frame, height=15, width=80, wrap='word', yscrollcommand=scrollbar.set)
+output_text = Text(output_frame, height=10, width=30, wrap='word', yscrollcommand=scrollbar.set)
 output_text.pack(side='left', fill='both', expand=True)
 scrollbar.config(command=output_text.yview)
 
